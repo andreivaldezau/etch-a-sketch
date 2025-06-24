@@ -1,10 +1,24 @@
-const GRID_LENGTH = 16;
+const size = 16;
+const button = document.querySelector(".prompt");
 const container = document.querySelector(".container");
 
-for (let i = 0; i < GRID_LENGTH; i++) {
-  const row = addRow();
-  for (let j = 0; j < GRID_LENGTH; j++) {
-    addSquare(row);
+button.addEventListener("click", () => onClick());
+generateGrid(size);
+
+function generateGrid(size) {
+  for (let i = 0; i < size; i++) {
+    const row = addRow();
+    for (let j = 0; j < size; j++) {
+      addSquare(row);
+    }
+  }
+}
+
+function onClick() {
+  const size = parseInt(prompt("Enter new size (0 to 100):"));
+  if (size > 0 && size <= 100) {
+    container.replaceChildren();
+    generateGrid(size);
   }
 }
 
