@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  gap: 1px;
+}
+
+.square {
+  color: black;
+  background-color: yellow;
+  height: 40px;
+  width: 40px;
+}
