@@ -10,8 +10,15 @@
 }
 
 .square {
-  color: black;
-  background-color: yellow;
+  background-color: lightgray;
   height: 40px;
   width: 40px;
+  transition-property: background-color;
+  transition-duration: 3s;
+  transition-delay: 0.5s;
+}
+
+.square:hover {
+  background-color: black;
+  transition: background-color 0s;
 }
